@@ -1,0 +1,23 @@
+[package]
+name = "shitcoin_raffle"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "shitcoin_raffle"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+#anchor-lang = "0.27.0"
+#anchor-spl = "0.27.0"
+anchor-lang = { git = "https://github.com/coral-xyz/anchor.git", features = ["init-if-needed"]}
+anchor-spl = { git = "https://github.com/coral-xyz/anchor.git"}
+mpl-token-metadata = { version="1.9.1", features = [ "no-entrypoint" ] }

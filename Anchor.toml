@@ -1,0 +1,18 @@
+[features]
+seeds = false
+skip-lint = false
+[programs.localnet]
+shitcoin_raffle = "DTXiWKJEs8DKd1K1Ex4TpyMNSyUdtxmoe7JjXM2gBzf5"
+
+[registry]
+url = "https://api.apr.dev"
+
+
+[provider]
+#cluster = "Localnet"
+#cluster = "devnet"
+cluster = "https://little-delicate-wave.solana-devnet.quiknode.pro/ed2a2c88df5e4ccf01cfe930774286cbe1f3f780/"
+wallet = "/home/mcshell/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
